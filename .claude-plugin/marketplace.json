@@ -1,0 +1,24 @@
+{
+  "$schema": "https://www.schemastore.org/claude-code-marketplace.json",
+  "name": "skill-template",
+  "description": "A template for an Agent Skills collection",
+  "owner": {
+    "name": "Wei Lee",
+    "email": "mai@mai0313.com"
+  },
+  "metadata": {
+    "description": "Skill template",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "examples",
+      "description": "Example skills that show the layout of a skill in this repository",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/ping"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,128 @@
+site_name: SkillTemplate
+site_url: https://mai0313.github.io/skill_template
+site_author: Wei Lee
+site_description: A template for an Agent Skills collection, powered by Zensical + GitHub Pages.
+
+repo_name: Mai0313/skill_template
+repo_url: https://github.com/Mai0313/skill_template
+edit_uri: edit/main/skills/
+
+docs_dir: skills
+site_dir: site
+dev_addr: 0.0.0.0:9987
+
+theme:
+  name: material
+  font:
+    code: Roboto Mono
+  icon:
+    repo: fontawesome/brands/github-alt
+    edit: material/pencil
+    view: material/eye
+  palette:
+  - media: "(prefers-color-scheme)"
+    toggle:
+      icon: material/lightbulb-auto
+      name: Switch to light mode
+  - media: '(prefers-color-scheme: light)'
+    scheme: default
+    # primary: teal
+    # accent: amber
+    toggle:
+      icon: material/lightbulb
+      name: Switch to dark mode
+  - media: '(prefers-color-scheme: dark)'
+    scheme: slate
+    # primary: teal
+    # accent: amber
+    toggle:
+      icon: material/lightbulb-outline
+      name: Switch to system preference
+  language: en
+  features:
+    - content.action.edit
+    - content.action.view
+    - content.code.annotate
+    - content.code.copy
+    - content.code.select
+    - content.footnote.tooltips
+    - content.tabs.link
+    - content.tooltips
+    - navigation.footer
+    - navigation.indexes
+    - navigation.instant
+    - navigation.instant.prefetch
+    # - navigation.instant.preview
+    - navigation.instant.progress
+    - navigation.path
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
+    - toc.follow
+
+# https://squidfunk.github.io/mkdocs-material/plugins
+plugins:
+  - search
+  - tags
+  # Auto-generate navigation from the skills/ folder layout.
+  # https://lukasgeiter.github.io/mkdocs-awesome-pages-plugin/
+  - awesome-pages
+  # Show the last-modified date of each note at the bottom of the page.
+  # https://timvink.github.io/mkdocs-git-revision-date-localized-plugin/
+  - git-revision-date-localized:
+      type: iso_datetime
+      enable_creation_date: true
+      fallback_to_build_date: true
+extra:
+  social:
+  - icon: fontawesome/brands/github-alt
+    link: https://github.com/Mai0313/skill_template
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.keys
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.details
+  - pymdownx.blocks.admonition:
+      types:
+      - note
+      - attention
+      - caution
+      - danger
+      - error
+      - tip
+      - hint
+      - warning
+      # Custom types
+      - info
+      - check
+  - pymdownx.blocks.tab:
+      alternate_style: True
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+extra_javascript:
+  # - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
