@@ -123,7 +123,7 @@ Allowed types:
 | `feat`     | A new skill or skill capability         |
 | `fix`      | A bug fix in a skill or tooling         |
 | `refactor` | Restructuring without changing behavior |
-| `doc`      | Documentation-only changes              |
+| `docs`     | Documentation-only changes              |
 | `perf`     | Performance improvement                 |
 | `style`    | Formatting or stylistic changes         |
 | `test`     | Adding or correcting tests              |
@@ -161,7 +161,7 @@ Pull requests are typically merged via **squash merge** to keep history linear.
 
 ## Security Reports
 
-Please **do not** report security vulnerabilities through public issues. Refer to [`SECURITY.md`](./SECURITY.md) for the responsible disclosure process.
+Please **do not** report security vulnerabilities through public issues. Refer to the [security policy](https://github.com/Mai0313/skill_template/security/policy) for the responsible disclosure process.
 
 ## Licensing
 
