@@ -79,7 +79,7 @@ Always run `make fmt` before opening a pull request.
 
 ## Authoring a Skill
 
-Each skill lives under `skills/<skill-name>/` and follows a consistent structure:
+Each skill lives under `skills/<skill-name>/` and follows the [Agent Skills spec](https://agentskills.io/specification):
 
 - `SKILL.md` — the entry document describing what the skill does, when to trigger it, and when to skip it
 - Supporting scripts and resources next to `SKILL.md`
@@ -93,7 +93,7 @@ Guidelines for high-quality skills:
 - **Side effects**: clearly document any external systems the skill touches and the permissions required.
 - **Idempotency**: when feasible, design steps so that re-running the skill is safe.
 
-When adding a new skill, also add `./skills/<skill-name>` to a plugin's `skills` array in `.claude-plugin/marketplace.json`, or the plugin marketplace will not install it. `skills/ping` is the smallest working example.
+When adding a new skill, also add `./skills/<skill-name>` to a plugin's `skills` array in `.claude-plugin/marketplace.json`, or the plugin marketplace will not install it. `skills/ping` is the smallest working example. `git add` the new folder before running `make fmt`; pre-commit skips untracked files.
 
 ## Branching Model
 

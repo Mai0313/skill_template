@@ -40,16 +40,6 @@ npx skills add Mai0313/skill_template --list
 npx skills add Mai0313/skill_template --skill ping
 ```
 
-常用 flag:
-
-| Flag                 | 作用                                           |
-| -------------------- | ---------------------------------------------- |
-| `-g, --global`       | 装到 `~/.<agent>/skills/`,而不是当前的 project |
-| `-a, --agent <name>` | 指定 agent (例如 `-a claude-code`)             |
-| `-s, --skill <name>` | 指定 skill (`'*'` 代表全部)                    |
-| `--all`              | 全部 skill 装到全部 agent,不询问               |
-| `-y, --yes`          | 跳过所有确认                                   |
-
 完整 CLI 文档:<https://github.com/vercel-labs/skills>。
 
 ### Option B — Claude Code plugin marketplace
@@ -68,11 +58,9 @@ template 只提供一个 bundle `examples`,里面是 `ping` 这个 skill。
 
 skill 目录在 <https://mai0313.github.io/skill_template>,也可以直接看 [`skills/`](./skills/) 文件夹。
 
-## 新增 skill
+## 开发
 
-1. 建立 `skills/<name>/SKILL.md`,格式遵循 [Agent Skills spec](https://agentskills.io/specification)。`skills/ping` 是最小的可用示例。
-2. 在 `.claude-plugin/marketplace.json` 里某个 plugin 的 `skills` 数组加上 `./skills/<name>`。
-3. 先 `git add` 新文件夹,再运行 `make fmt`。
+开发环境设置、skill 编写规范与 pull request 流程请见 [CONTRIBUTING.md](./.github/CONTRIBUTING.md)。
 
 ## License
 

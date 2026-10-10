@@ -40,16 +40,6 @@ npx skills add Mai0313/skill_template --list
 npx skills add Mai0313/skill_template --skill ping
 ```
 
-Common flags:
-
-| Flag                 | What it does                                                   |
-| -------------------- | -------------------------------------------------------------- |
-| `-g, --global`       | Install to `~/.<agent>/skills/` instead of the current project |
-| `-a, --agent <name>` | Target a specific agent (e.g. `-a claude-code`)                |
-| `-s, --skill <name>` | Install a specific skill (`'*'` for all)                       |
-| `--all`              | Install all skills to all agents, no prompts                   |
-| `-y, --yes`          | Skip confirmation prompts                                      |
-
 Full CLI reference: <https://github.com/vercel-labs/skills>.
 
 ### Option B — Claude Code plugin marketplace
@@ -68,11 +58,9 @@ The template publishes one bundle, `examples`, holding the `ping` skill.
 
 The catalogue is rendered at <https://mai0313.github.io/skill_template>. You can also browse the [`skills/`](./skills/) directory directly.
 
-## Adding a skill
+## Development
 
-1. Create `skills/<name>/SKILL.md`, following the [Agent Skills spec](https://agentskills.io/specification). `skills/ping` is the smallest working example.
-2. Add `./skills/<name>` to a plugin's `skills` array in `.claude-plugin/marketplace.json`.
-3. `git add` the new folder, then run `make fmt`.
+Contributor setup, skill authoring conventions, and the pull request process live in [CONTRIBUTING.md](./.github/CONTRIBUTING.md).
 
 ## License
 
